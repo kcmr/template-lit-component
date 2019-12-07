@@ -11,6 +11,8 @@
   "scripts": {
     "test": "karma start --coverage",
     "test:watch": "karma start --auto-watch=true --single-run=false --coverage",
+    "test:snapshots:prune": "karma start --coverage --prune-snapshots",
+    "test:snapshots:update": "karma start --coverage --update-snapshots",
     "prestart": "rimraf dist",
     "start": "parcel demo/index.html"
   },
