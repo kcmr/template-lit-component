@@ -3,7 +3,9 @@ import '../{{component}}.js';
 
 suite('<{{component}}>', () => {
   test('"myProperty" can be set via "my-property" attribute', async() => {
-    const el = await html`<{{component}} my-property="foo"></{{component}}>`;
+    const el = await fixture(html`
+      <{{component}} my-property="foo"></{{component}}>
+    `);
 
     assert.strictEqual(el.myProperty, 'foo');
   });
